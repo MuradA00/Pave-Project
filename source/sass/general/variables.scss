@@ -20,7 +20,7 @@
 $containerPadding: clamp(10px, 1.25vw, 20px);
 
 ._container {
-  max-width: calc(73.125rem + $containerPadding);
+  max-width: calc(74rem + $containerPadding);
   padding: 0 $containerPadding;
   margin-inline: auto;
   @include max-media(56.25em) {
