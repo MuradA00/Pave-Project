@@ -1,0 +1,19 @@
+.app {
+  background: hsla(232, 100%, 98%, 1);
+  &__body {
+    padding: clamp(120px, 12.5vw, 200px) 14px;
+    max-width: calc(35rem + 35px);
+    margin-inline: auto;
+    text-align: center;
+  }
+  &__info {
+    p {
+      font-size: clamp(24px, 1.75vw, 28px);
+      font-weight: 700;
+      color: hsla(224, 20%, 81%, 1);
+      span {
+        color: var(--clr-dark);
+      }
+    }
+  }
+}

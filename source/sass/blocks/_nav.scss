@@ -1,0 +1,16 @@
+.nav {
+  &__list {
+    @include al-flex;
+    grid-gap: clamp(15px, 2vw, var(--32-spc));
+  }
+  &__link {
+    font-size: clamp(14px, 1vw, 16px);
+    font-weight: 700;
+  }
+}
+
+@include max-media(66.875em) {
+ .header__row {
+  display: none;
+ }
+}

@@ -1,0 +1,46 @@
+.about-row {
+  margin-top: max(5vw, 48px);
+  display: grid;
+  grid-gap: max(5vw, 48px);
+  &__item {
+    display: grid;
+    grid-template-columns: minmax(22.5rem, 20.4375rem) auto;
+    align-items: center;
+    grid-gap: max(6.25vw, 24px);
+    &:nth-child(2n ) {
+      grid-template-columns: auto minmax(22.5rem, 20.4375rem);
+      @include max-media(50.25em) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    @include max-media(50.25em) {
+      grid-template-columns: 100%;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    grid-gap: max(1.5vw, 8px);
+  }
+  &__name {
+    font-size: clamp(24px, 1.875vw, 30px);
+    font-weight: 700;
+  }
+  &__image {
+    img, picture {
+      height: 100%;
+      width: 100%;
+    }
+    @include max-media(50.25em) {
+      max-width: 500px;
+      margin-inline: auto;
+    }
+  }
+  &__descr {
+    p {
+      font-size: 1rem;
+      color:  hsla(226, 21%, 52%, 1);
+    }
+  }
+}

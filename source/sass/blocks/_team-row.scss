@@ -1,0 +1,41 @@
+.team-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22.2rem, 1fr));
+  align-items: center;
+  grid-gap: var(--40-spc);
+  &__image {
+    max-height: 23.4375rem;
+    overflow: hidden;
+    width: fit-content;
+    img, picture {
+      height: 100%;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  &__info {
+    max-width: 360px;
+    width: 100%;
+    padding: 1.5625rem;
+    border-top-left-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
+    background: hsla(232, 100%, 98%, 1);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 7px;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: clamp(20px, 1.75vw, 28px);
+  }
+  &__pos {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+}

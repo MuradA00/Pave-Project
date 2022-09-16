@@ -1,0 +1,70 @@
+:root {
+  --ff: 'Nunito Sans', sans-serif;
+  // COLOR
+  --clr-blue: hsla(227, 100%, 67%, 1);
+  --clr-dark: hsla(226, 98%, 17%, 1);
+  --clr-pink: hsla(299, 63%, 47%, 1);
+  --clr-light:hsla(226, 21%, 52%, 1);
+  --clr-white:hsla(0, 0%, 100%, 1);
+  --clr-beige:hsla(0, 0%, 98%, 1);
+
+  // SPACING
+  --40-spc: 2.5rem;
+  --32-spc: 2rem;
+  --20-spc: 1.25rem;
+  --14-spc: 0.875rem;
+  --200-spc: 12.5rem;
+  --100-spc: 6.25rem;
+}
+
+$containerPadding: clamp(10px, 1.25vw, 20px);
+
+._container {
+  max-width: calc(73.125rem + $containerPadding);
+  padding: 0 $containerPadding;
+  margin-inline: auto;
+  @include max-media(56.25em) {
+    max-width: calc(50em + $containerPadding);
+  }
+}
+
+._spacingSection {
+  padding: clamp(5rem, 9.375vw, 150px) 0;
+}
+
+._buttonLight {
+  font-size: 1rem;
+  padding: var(--14-spc) var(--32-spc);
+  color: var(--clr-pink);
+  outline: 1px solid var(--clr-pink);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+._buttonPink {
+  font-size: 1rem;
+  padding: var(--14-spc) var(--32-spc);
+  color: var(--clr-white);
+  outline: none;
+  background-color: var(--clr-pink);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+._blueTitle {
+  color: var(--clr-blue);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: clamp(1rem, 1.25vw, 20px);
+}
+
+._defTitle {
+  font-size: clamp(32px, 2.5vw, 40px);
+  font-weight: 700;
+  text-align: center;
+}
+
+
+

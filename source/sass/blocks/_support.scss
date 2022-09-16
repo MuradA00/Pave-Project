@@ -1,0 +1,30 @@
+.support {
+  background-color: hsla(224, 100%, 24%, 1);
+  padding-top: 43px;
+  &__container {
+    max-width: calc(78.125rem + $containerPadding);
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-gap: clamp(40px, 6.25vw, 100px);
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(32px, 2.5vw, 40px);
+  }
+  &__descr {
+    max-width: 28.75rem;
+    p {
+      color: var(--clr-white);
+      font-size: clamp(24px, 1.875vw, 30px);
+      font-weight: 700;
+    }
+  }
+  &__platforms {
+    display: flex;
+    grid-gap: 31px;
+  }
+}

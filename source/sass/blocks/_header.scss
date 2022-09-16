@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  padding: clamp(20px, 3vw, 48px) 0px;
+  &__container {
+    max-width: calc(78.75rem + $containerPadding);
+  }
+  &__body {
+    @include al-flex;
+    justify-content: space-between;
+  }
+}
+
