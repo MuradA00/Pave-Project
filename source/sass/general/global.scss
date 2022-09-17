@@ -25,6 +25,10 @@ html {
   min-height: -webkit-fill-available;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 *,
 *::after,
 *::before {

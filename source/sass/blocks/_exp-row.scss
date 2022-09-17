@@ -17,6 +17,7 @@
       width: 100%;
       background-repeat: no-repeat;
       z-index: 1;
+      background-size: contain;
     }
     &:nth-child(1) {
       &::before {
@@ -31,14 +32,52 @@
         height: 45px;
         bottom: 0;
       }
+      &::after {
+        @include psevdo;
+        width: 100%;
+        height: 122px;
+        background-image: url('../../img/experience/second-item-decor-2.png');
+        background-repeat: no-repeat;
+        left: 88px;
+        top: 0;
+      }
+    }
+    &:nth-child(3) {
+      &::before {
+        background-image: url('../../img/experience/third-item-decor.png');
+        height: 32px;
+        top: 97px;
+      }
+    }
+    &:nth-child(4) {
+      &::before {
+        background-image: url('../../img/experience/fourth-item-decor.png');
+        height: 44px;
+        bottom: 0;
+        right: 0;
+        width: 138px;
+      }
+    }
+    &:nth-child(5) {
+      &::before {
+        background-image: url('../../img/experience/fifth-item-decor.png');
+        height: 51px;
+        bottom: 0;
+        right: 56px;
+        width: 305px;
+      }
     }
     &:nth-child(6) {
       &::before {
         background-image: url('../../img/experience/sixth-item-icon.png');
-        height: 57px;
+        height: 59px;
         top: 35px;
       }
     }
+  }
+  &__icon {
+    position: relative;
+    z-index: 50;
   }
   &__name {
     font-weight: 700;

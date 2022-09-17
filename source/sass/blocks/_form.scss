@@ -1,0 +1,56 @@
+.form {
+  border-radius: 8px;
+  max-width: 31.25rem;
+  background-color: var(--clr-white);
+  padding: clamp(40px, 2.5vw, 48px) clamp(24px, 2.5vw, 48px);
+  position: relative;
+  z-index: 100;
+  @include max-media(56.25em) {
+    margin-inline: auto;
+  }
+  &__textarea {
+    max-height: 9.375rem;
+    width: 100%;
+    resize: none;
+    &:active {
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__button {
+    width: fit-content;
+    margin-inline: auto;
+  }
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 1.5rem;
+  &__item {
+    display: grid;
+    grid-gap: 8px;
+    input {
+      font-size: 1rem;
+      &::placeholder {
+        font-size: 1rem;
+        color: hsla(224, 20%, 81%, 1);
+      }
+    }
+    input,
+    textarea {
+      outline: 1px solid hsla(224, 20%, 81%, 1) !important;
+      padding: 12px 1rem;
+      border: 0;
+      border-radius: 8px;
+    }
+    textarea {
+      height: 150px;
+      &::placeholder {
+        color: hsla(224, 20%, 81%, 1);
+      }
+    }
+  }
+}

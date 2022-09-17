@@ -1,0 +1,15 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 3px;
+  span {
+    background-color: #C22CC5;
+    width: 24px;
+    height: 2.67px;
+    display: block;
+    border-radius: 8px;
+  }
+  @include min-media(66.875em) {
+    display: none;
+  }
+}

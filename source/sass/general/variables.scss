@@ -33,15 +33,24 @@ $containerPadding: clamp(10px, 1.25vw, 20px);
 }
 
 ._buttonLight {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 1rem;
   padding: var(--14-spc) var(--32-spc);
   color: var(--clr-pink);
   outline: 1px solid var(--clr-pink);
   border-radius: 8px;
   font-weight: 700;
+  background-color: var(--clr-white);
 }
 
 ._buttonPink {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 1rem;
   padding: var(--14-spc) var(--32-spc);
   color: var(--clr-white);

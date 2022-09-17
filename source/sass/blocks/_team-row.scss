@@ -1,6 +1,9 @@
 .team-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22.2rem, 1fr));
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(22.2rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   grid-gap: var(--40-spc);
   &__image {
@@ -12,10 +15,11 @@
     }
   }
   &__item {
+    flex: 1 1 22.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    max-width: 22.5rem;
   }
   &__info {
     max-width: 360px;
