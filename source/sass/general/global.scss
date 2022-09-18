@@ -14,6 +14,10 @@ body {
   flex-direction: column;
 }
 
+.--body-locked {
+  overflow-y: hidden;
+}
+
 html {
   box-sizing: border-box;
   width: 100%;
