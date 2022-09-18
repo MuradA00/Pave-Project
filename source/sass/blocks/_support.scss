@@ -28,3 +28,25 @@
     grid-gap: 31px;
   }
 }
+
+@include max-media(62.5em) {
+  .support {
+    &__row {
+      grid-template-columns: 100%;
+    }
+    &__info {
+      width: fit-content;
+      margin-inline: auto;
+    }
+    &__image {
+      margin-inline: auto;
+      max-width: 50.75rem;
+    }
+    &__platforms {
+      grid-gap: 25px;
+    }
+    &__platforms-icon {
+      max-width: 8.3125rem;
+    }
+  }
+}

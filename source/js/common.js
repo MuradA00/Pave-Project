@@ -1,31 +1,19 @@
 AOS.init();
+const burger = document.querySelector('.burger')
+const mobMenu = document.querySelector('.m-menu')
+const body = document.getElementById('body')
 
-const burger = document.querySelector('.burger');
-const mobileMenu = document.querySelector('.header__nav');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('_active-burger')
+  if (burger.classList.contains('_active-burger')) {
+    mobMenu.classList.add('--active-menu')
+    body.classList.add('--body-locked')
+  } else {
+    mobMenu.classList.remove('--active-menu')
+    body.classList.remove('--body-locked')
+  }
+})
 
-burger.onclick = addClassForMenu;
-function addClassForMenu() {
-  burger.classList.toggle('active');
-  mobileMenu.classList.toggle('active');
-  document.body.classList.toggle('active')
-}
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      document.querySelectorAll('.header__nav-link').forEach((link) =>{
-
-        if (link.getAttribute('href').replace('#', '') == entry.target.id) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      })
-    }
-  });
-}, {
-  threshold: 0.4
-});
 
 document.querySelectorAll('.section-observe').forEach((section) => observer.observe(section))
 

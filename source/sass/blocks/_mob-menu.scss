@@ -1,0 +1,29 @@
+.m-menu {
+  clip-path: circle(0 at 92.3% -2.5%);
+  transition: clip-path 400ms ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--clr-white);
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 65px;
+  &__container {
+    padding: 40px 10px 55px 10px;
+    max-width: 27.25rem;
+    margin-inline: auto;
+    min-width: 325px;
+  }
+  &__buttons {
+    width: 100%;
+    margin-top: var(--40-spc);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+  }
+}
+
+.--active-menu {
+  clip-path: circle(140% at 95.3% 8.5%);
+}
