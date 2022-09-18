@@ -5,17 +5,16 @@
   display: grid;
   grid-gap: 24px;
   &__item {
-    padding: 1.5rem 1.25rem;
     border: 1px solid hsla(224, 20%, 81%, 1);
     border-radius: 8px;
     cursor: pointer;
-    transition: all 300ms ease;
   }
   &__visible {
     display: flex;
     justify-content: space-between;
     align-items: center;
     grid-gap: 24px;
+    padding: 1.5rem 1.25rem;
   }
   &__quest {
     width: 100%;
@@ -54,23 +53,21 @@
     transition: all 400ms ease;
   }
   &__hidden {
-    // padding-top: clamp(1rem, 1.875vw, 30px);
-    transition: all 500ms ease;
-    height: 0;
-    opacity: 0;
-    overflow: hidden;
-    visibility: hidden;
-    display: grid;
+    display: none;
     grid-gap: 10px;
+    padding: 27px;
     p {
       color: hsla(226, 21%, 52%, 1);
-
     }
   }
 }
 
 .collapse {
+
   .faq-row {
+    &__hidden {
+      display: block;
+    }
     &__icon {
       background-color: var(--clr-white);
       outline: 1px solid var(--clr-blue);
@@ -79,7 +76,7 @@
       span {
         background-color: var(--clr-blue);
         &:nth-child(2) {
-          transform: translate(-50%, -50%) rotate(-180deg);
+          transform: translate(-50%, -50%) scale(0);
         }
       }
     }

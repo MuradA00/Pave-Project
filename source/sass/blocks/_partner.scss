@@ -8,6 +8,9 @@
   }
   &__image {
     max-height: 30rem;
+    img, picture {
+      max-height: 30rem;
+    }
   }
   &__info {
     display: grid;
@@ -40,9 +43,6 @@
       justify-content: center;
     }
     &__image {
-      img, picture, source {
-        height: 100%;
-      }
     }
     &__btn {
       max-width: 20.4375rem;

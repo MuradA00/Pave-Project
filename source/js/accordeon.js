@@ -1,38 +1,15 @@
-const pxAccordion = (elementSelector) => {
-  const selectedElements = document.querySelectorAll(elementSelector);
-  selectedElements.forEach((item) => {
-    pxAccordionInit(item);
+const acc = document.getElementsByClassName("faq-row__visible");
+const icons = document.getElementsByClassName('faq-row__icon')
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("collapse");
+    const panel = this.nextElementSibling;
+    if (panel.style.display === 'grid'){
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = 'grid';
+    }
   });
 };
-
-const pxAccordionInit = (element) => {
-  const selectedElement = element;
-  const accHeads = selectedElement.querySelectorAll(
-    ".faq-row__item .faq-row__visible"
-  );
-  accHeads.forEach((headItem) => {
-    headItem.addEventListener("click", (event) => {
-      const accItem = event.target.parentElement;
-      const accBody = event.target.nextElementSibling;
-      let accBodyHeight = accBody.scrollHeight;
-
-      accBody.addEventListener("transitionend", () => {
-        if (accItem.classList.contains("active")) accBody.style.height = "auto";
-      });
-      accItem.classList.toggle("active");
-      if (accItem.classList.contains("active")) {
-        accBody.style.height = accBodyHeight + "px";
-      } else {
-        requestAnimationFrame(() => {
-          accBodyHeight = accBody.scrollHeight;
-          accBody.style.height = accBodyHeight + "px";
-          requestAnimationFrame(() => {
-            accBody.style.height = 0 + "px";
-          });
-        });
-      }
-    });
-  });
-};
-
-pxAccordion("#faqRow");

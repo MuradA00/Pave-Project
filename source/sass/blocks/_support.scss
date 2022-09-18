@@ -27,6 +27,9 @@
     display: flex;
     grid-gap: 31px;
   }
+  &__platforms-icon {
+    max-width: 10.8rem;
+  }
 }
 
 @include max-media(62.5em) {

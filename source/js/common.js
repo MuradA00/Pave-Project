@@ -14,21 +14,16 @@ burger.addEventListener('click', () => {
   }
 })
 
+const menuMobLinks = document.querySelectorAll('.menu-nav__link');
 
-document.querySelectorAll('.section-observe').forEach((section) => observer.observe(section))
-
-if (document.querySelector('.header__nav-list--index')) {
-  document.querySelector('.header__nav-list--index').addEventListener('click', function(e){
-    if (e.target.classList.contains('header__nav-link')) {
-      e.preventDefault();
-      const id = e.target.getAttribute('href').replace('#', '');
-      let headerHeight = document.querySelector('header').clientHeight;
-      window.scrollTo({
-        top: document.getElementById(id).offsetTop - headerHeight,
-        behavior:"smooth"
-      })
-    }
-  })
+if (menuMobLinks.length > 0) {
+  menuMobLinks.forEach(function (menuMobLinks) {
+    menuMobLinks.addEventListener("click", function (event) {
+      mobMenu.classList.remove('--active-menu');
+      body.classList.remove('--body-locked')
+      burger.classList.remove('_active-burger')
+    });
+  });
 }
 
 

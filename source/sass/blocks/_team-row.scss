@@ -10,6 +10,8 @@
     max-height: 23.4375rem;
     overflow: hidden;
     width: fit-content;
+    position: relative;
+    max-width: 300px;
     img, picture {
       height: 100%;
     }
@@ -41,5 +43,25 @@
   &__pos {
     font-size: 1.125rem;
     font-weight: 700;
+  }
+}
+
+
+.team-img-1 {
+  &::before {
+    @include psevdo;
+    top: 66px;
+    left: 0;
+    width: 296px;
+    height: 296px;
+    background-image: url('../../img/team/grad-first-image.svg');
+    background-repeat: no-repeat;
+    z-index: -1;
+    @include max-media(31.25em) {
+      width: 268px;
+      height: 268px;
+      background-size: cover;
+      top: 60px;
+    }
   }
 }

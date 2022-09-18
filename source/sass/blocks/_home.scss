@@ -46,6 +46,9 @@
       max-width: 20.4375rem;
     }
   }
+  &__image {
+    max-width: 53.75rem;
+  }
   &__descr {
     max-width: 36rem;
     @include max-media(37.5em) {
