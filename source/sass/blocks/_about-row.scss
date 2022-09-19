@@ -44,3 +44,15 @@
     }
   }
 }
+
+@include max-media(50.3125em) {
+    @supports not (grid-gap: 24px) {
+      .about-row {
+        &__item {
+          &:not(:last-child) {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+}
