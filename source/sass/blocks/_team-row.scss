@@ -7,12 +7,12 @@
   align-items: center;
   grid-gap: var(--40-spc);
   &__image {
-    max-height: 23.4375rem;
+    max-height: 23.75rem;
     overflow: hidden;
     width: fit-content;
     position: relative;
-    max-width: 300px;
-    img, picture {
+    max-width: 331px;
+    img, picture, source {
       height: 100%;
     }
   }
