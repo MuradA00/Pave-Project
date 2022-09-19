@@ -63,6 +63,12 @@
 }
 
 .collapse {
+  @include max-media(34.375em) {
+    .mob-icon {
+      margin-top: 1rem;
+      display: block !important;
+    }
+  }
   .faq-row {
     &__hidden {
       display: block;
@@ -84,7 +90,6 @@
   .mob-icon {
     background-color: var(--clr-white);
     outline: 1px solid var(--clr-blue);
-
   }
 
 
@@ -112,7 +117,7 @@
 
 @include min-media(34.375em) {
   .mob-icon {
-    display: none;
+    display: none !important;
   }
 }
 
