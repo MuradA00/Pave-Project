@@ -1,7 +1,7 @@
 .app {
   background: hsla(232, 100%, 98%, 1);
   &__body {
-    padding: clamp(120px, 12.5vw, 200px) 14px;
+    padding: clamp(120px, 12.5vw, 200px) 0;
     max-width: calc(35rem + 35px);
     margin-inline: auto;
     text-align: center;

@@ -92,3 +92,91 @@
     }
   }
 }
+
+@include max-media(47.375em) {
+  .exp-row {
+    grid-gap: 24px;
+    &__block {
+      max-width: 20.4375rem;
+      margin-inline: auto;
+      &:nth-child(1) {
+        &::before {
+          background-image: url('../../img/experience/first-item-decor-mob.svg');
+          background-repeat: no-repeat;
+          width: 185px;
+          height: 63px;
+          background-size: cover;
+          right: 0;
+          bottom: 0;
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          background-image: url('../../img/experience/second-item-decor-mob.svg');
+          width: 105px;
+          height: 104px;
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          content: none;
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          background-image: url('../../img/experience/third-item-decor-mob.svg');
+          width: 314px;
+          height: 152px;
+          top: 0;
+          left: 12px;
+        }
+        &::after {
+          @include psevdo;
+          width: 22px;
+          height: 47px;
+          bottom: 0;
+          left: 0;
+          background-repeat: no-repeat;
+          background-image: url('../../img/experience/third-item-decor-mob-2.svg');
+        }
+      }
+      &:nth-child(4) {
+        &::before {
+          background-image: url('../../img/experience/fourth-item-decor-mob.svg');
+          width: 31px;
+          height: 125px;
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          @include psevdo;
+          background-image: url('../../img/experience/fourth-item-decor-mob-2.svg');
+          width: 166px;
+          height: 68px;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      &:nth-child(5) {
+        &::before {
+          background-image: url('../../img/experience/fifth-item-decor-mob.svg');
+          width: 120px;
+          height: 102px;
+          top: 0;
+          left: 0;
+        }
+      }
+      &:nth-child(6) {
+        overflow: hidden;
+        &::before {
+          background-image: url('../../img/experience/sixth-item-icon-mob.svg');
+          width: 100%;
+          height: 107%;
+          top: 0;
+          left: 0;
+          background-position: center;
+        }
+      }
+    }
+  }
+}

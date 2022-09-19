@@ -3,7 +3,7 @@
   width: 100%;
   padding: clamp(20px, 3vw, 48px) 0px;
   @include max-media(66.875em) {
-    padding: 20px 14px;
+    padding: 20px 0;
   }
   &__container {
     max-width: calc(78.75rem + $containerPadding);

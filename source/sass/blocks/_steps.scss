@@ -1,4 +1,49 @@
 .steps {
+  &__slider {
+    max-width: 550px;
+    margin-inline: auto;
+    margin-top: 2rem;
+    // overflow: hidden;
+  }
+  &__slider-item {
+    display: grid;
+    grid-gap: 24px;
+  }
+  &__slider-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__slider-item {
+    // &:nth-child(1) {
+    //   .steps__slider-num {
+    //     position: relative;
+    //     &::before {
+    //       @include psevdo;
+    //       width: 195px;
+    //       height: 35px;
+    //       background-image: url('../../img/steps/vector-mob-1.svg');
+    //       background-repeat: no-repeat;
+    //       background-size: cover;
+    //       right: -10rem;
+    //     }
+    //   }
+    // }
+  }
+  &__name {
+    margin-top: 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  &__slider-num {
+    margin-inline: auto;
+  }
+  &__slider-descr {
+    margin-top: 8px;
+    max-width: 20.4375rem;
+    margin-inline: auto;
+    color: hsla(226, 21%, 52%, 1);
+  }
   &__inner {
     display: grid;
     grid-template-columns: 22.5rem auto;
@@ -13,12 +58,12 @@
     position: relative;
     z-index: 50;
     margin-inline: auto;
-    transition: all 500ms ease;
+    transition: all 650ms ease;
     overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-30%, -50%);
+    transform: translate(45%, -50%);
   }
   &__column {
     display: grid;
@@ -47,7 +92,8 @@
     display: grid;
     grid-gap: 1rem;
   }
-  &__number {
+  &__number,
+  .steps__slider-num {
     background-color: var(--clr-blue);
     border-radius: 50%;
     width: 64px;
@@ -84,7 +130,6 @@
     }
   }
   &__image {
-
     // max-width: 23.125rem;
     position: relative;
     width: 708px;
@@ -111,3 +156,26 @@
   background-color: var(--clr-pink);
 }
 
+@include min-media(65.625em) {
+  .steps {
+    &__slider {
+      display: none;
+    }
+  }
+}
+
+@include max-media(65.625em) {
+  .steps {
+    &__inner {
+      display: none !important;
+    }
+  }
+}
+
+.swiper-slide-active {
+  .steps {
+    &__slider-num {
+      background-color: var(--clr-pink);
+    }
+  }
+}
