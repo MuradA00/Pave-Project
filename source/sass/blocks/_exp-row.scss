@@ -96,6 +96,8 @@
 @include max-media(47.375em) {
   .exp-row {
     grid-gap: 24px;
+    display: flex;
+    flex-direction: column;
     &__block {
       max-width: 20.4375rem;
       margin-inline: auto;

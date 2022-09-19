@@ -12,6 +12,10 @@
     background-position: center;
     background-size: contain;
     z-index: 50;
+    @include max-media(46.25em) {
+      background-image: url('../../img/contact/contact-decor-mob.png');
+      background-size: 471px;
+    }
   }
   &::before {
     @include psevdo;

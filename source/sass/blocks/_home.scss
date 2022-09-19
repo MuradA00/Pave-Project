@@ -12,9 +12,10 @@
     background-image: url('../../img/home/home-dec.png');
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: 1160px;
     @include max-media(37.5em) {
       background-image: url('../../img/home/home-dec-mob.png');
-      background-size: cover;
+      background-size: contain;
       top: -2.5rem;
       background-position: top top;
     }

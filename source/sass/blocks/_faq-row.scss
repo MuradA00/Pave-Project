@@ -55,7 +55,7 @@
   &__hidden {
     display: none;
     grid-gap: 10px;
-    padding: 27px;
+    padding: 0px 24px 24px 24px;
     p {
       color: hsla(226, 21%, 52%, 1);
     }
@@ -63,7 +63,6 @@
 }
 
 .collapse {
-
   .faq-row {
     &__hidden {
       display: block;
@@ -73,6 +72,64 @@
       outline: 1px solid var(--clr-blue);
     }
     &__label {
+      span {
+        background-color: var(--clr-blue);
+        &:nth-child(2) {
+          transform: translate(-50%, -50%) scale(0);
+        }
+      }
+    }
+  }
+
+  .mob-icon {
+    background-color: var(--clr-white);
+    outline: 1px solid var(--clr-blue);
+
+  }
+
+
+  @include max-media(34.375em) {
+    .faq-row__label {
+      span {
+        background-color: var(--clr-blue);
+        &:nth-child(2) {
+          transform: translate(-50%, -50%) scale(0);
+        }
+      }
+    }
+    .mob-icon {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .faq-row {
+      &__icon {
+        display: none;
+      }
+    }
+  }
+}
+
+@include min-media(34.375em) {
+  .mob-icon {
+    display: none;
+  }
+}
+
+@include max-media(34.375em) {
+  .faq-row {
+    &__visible {
+      flex-direction: column;
+    }
+    &__hidden {
+      grid-gap: 1rem;
+    }
+  }
+  .mob-icon {
+    background-color: var(--clr-white);
+    outline: 1px solid var(--clr-blue);
+    margin-inline: auto;
+    .faq-row__label {
       span {
         background-color: var(--clr-blue);
         &:nth-child(2) {
