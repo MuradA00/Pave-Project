@@ -38,3 +38,15 @@ let stepsSlider = new Swiper(".steps__slider", {
   // effect: 'fade'
 });
 
+
+window.onload = function(){
+  const wrapper = document.getElementById('body'),
+      layerTwo = document.querySelector('.home__image');
+
+  wrapper.addEventListener('mousemove', (e) => {
+    const pageX = e.clientX,
+        pageY = e.clientY;
+
+    layerTwo.style.transform = 'translateX(-' + pageX/250 + '%) translateY(-' + pageY/250 + '%)';
+  });
+}

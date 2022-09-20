@@ -46,7 +46,6 @@
 }
 
 @include max-media(50.3125em) {
-    @supports not (grid-gap: 24px) {
       .about-row {
         &__item {
           grid-gap: 0;
@@ -55,5 +54,4 @@
           margin-top: 24px;
         }
       }
-    }
 }
