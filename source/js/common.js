@@ -26,19 +26,6 @@ if (menuMobLinks.length > 0) {
   });
 }
 
-
-let stepsSlider = new Swiper(".steps__slider", {
-  slidesPerView: 1,
-  spaceBetween: 24,
-  speed: 600,
-  autoplay: {
-    delay: 2000
-  }
-  // fadeEffect: { crossFade: true },
-  // effect: 'fade'
-});
-
-
 window.onload = function(){
   const wrapper = document.getElementById('body'),
       layerTwo = document.querySelector('.home__image');
