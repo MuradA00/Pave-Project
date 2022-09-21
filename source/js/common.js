@@ -42,7 +42,7 @@ window.onload = function(){
 
   wrapper.addEventListener('mousemove', (e) => {
     const pageX = e.clientX,
-        pageY = e.clientY;
+          pageY = e.clientY;
 
     layerTwo.style.transform = 'translateX(-' + pageX/250 + '%) translateY(-' + pageY/250 + '%)';
   });
