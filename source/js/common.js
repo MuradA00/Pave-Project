@@ -14,6 +14,16 @@ burger.addEventListener('click', () => {
   }
 })
 
+let stepsSlider = new Swiper(".steps__slider", {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  speed: 600,
+  autoplay: {
+    delay: 2000
+  }
+});
+
+
 const menuMobLinks = document.querySelectorAll('.menu-nav__link');
 
 if (menuMobLinks.length > 0) {
