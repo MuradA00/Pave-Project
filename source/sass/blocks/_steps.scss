@@ -1,4 +1,5 @@
 .steps {
+
   &__slider {
     max-width: 550px;
     margin-inline: auto;
@@ -53,7 +54,6 @@
   }
   &__img {
     opacity: 0;
-    visibility: hidden;
     max-width: 23.125rem;
     position: relative;
     z-index: 50;
@@ -63,16 +63,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(45%, -50%);
+    transform: translate(-50%, -50%);
   }
   &__column {
     display: grid;
     grid-gap: 64px;
-  }
-  ._active-img {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%);
   }
   &__heading {
     font-weight: 700;
@@ -87,11 +82,15 @@
   &__column-block {
     display: flex;
     grid-gap: 2.25rem;
+    opacity: 0;
   }
   &__column-info {
     display: grid;
     grid-gap: 1rem;
   }
+  // &__number {
+  //   opacity: 0;
+  // }
   &__number,
   .steps__slider-num {
     background-color: var(--clr-blue);
@@ -115,6 +114,9 @@
       background-position: center;
     }
   }
+  // &__number {
+  //   opacity: 0;
+  // }
   ._first {
     &::before {
       background-image: url('../../img/steps/steps-vector-1.svg');
@@ -177,5 +179,12 @@
     &__slider-num {
       background-color: var(--clr-pink);
     }
+  }
+}
+
+
+._active-block {
+  .steps__number {
+    background-color: var(--clr-pink);
   }
 }
