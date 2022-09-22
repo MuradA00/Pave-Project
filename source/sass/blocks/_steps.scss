@@ -48,9 +48,10 @@
   &__inner {
     display: grid;
     grid-template-columns: 22.5rem auto;
-    justify-content: space-between;
+    justify-content: space-around;
+    grid-gap: 2rem;
     align-items: center;
-    padding-top: 40px;
+    padding-top: clamp(20px, 5vw, 80px);
   }
   &__img {
     opacity: 0;
@@ -64,6 +65,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    picture, img, source {
+      max-height: clamp(500px, 43.75vw, 700px);
+      @include max-media(95.625em) {
+        max-height: 500px;
+      }
+    }
   }
   &__column {
     display: grid;
@@ -134,21 +141,28 @@
   &__image {
     // max-width: 23.125rem;
     position: relative;
-    width: 708px;
-    height: 876px;
+    width: clamp(500px, 43.75vw, 700px);
+    height: 700px;
+    @include max-media(90.625em) {
+      height: 650px;
+    }
+    @include max-media(85.375em) {
+      max-height: 600px;
+      height: 100%;
+    }
+    max-height: 700px;
     &::before {
       @include psevdo;
       width: 100%;
       max-width: 44.25rem;
       height: 100%;
-      // max-height: 44.25rem;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       background-image: url('../../img/steps/steps-decor.png');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       z-index: 5;
     }
   }

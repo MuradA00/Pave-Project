@@ -5,6 +5,13 @@ const secondBlock = document.querySelector('._second-block')
 const thirdBlock = document.getElementById('heading3')
 
 function setScrollText(){
+  gsap.to('.steps__image', {
+    scrollTrigger: {
+      trigger: '.steps__name'
+    },
+    opacity: 1,
+    start: '500s'
+  })
 
   gsap.to('._first-block', {
     scrollTrigger: {
@@ -112,7 +119,7 @@ function setScrollImages() {
 gsap.to('.steps', {
   scrollTrigger: {
     pin: '.steps',
-    end: '+=2500s',
+    end: '+=2100s',
     markers: false,
     pinSpacing: true,
   },
@@ -121,3 +128,15 @@ gsap.to('.steps', {
 
 setScrollText();
 setScrollImages();
+
+
+const setHeight = () => {
+  document.querySelector(".steps").style.minHeight = window.innerHeight + "px"
+};
+
+let deviceWidth = window.matchMedia("(max-width: 4000px)");
+if (deviceWidth.matches) {
+  window.addEventListener("resize", setHeight);
+
+  setHeight();
+}

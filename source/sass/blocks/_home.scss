@@ -143,3 +143,35 @@
     }
   }
 }
+
+
+@include max-media(93.75em) {
+  .home {
+    &__image {
+      picture {
+        &:nth-child(1) {
+          left: -5rem;
+        }
+        &:nth-child(2) {
+          left: -5rem;
+        }
+      }
+    }
+  }
+}
+
+
+@include max-media(75em) {
+  .home {
+    &__image {
+      picture {
+        &:nth-child(1) {
+          left: 0rem;
+        }
+        &:nth-child(2) {
+          left: 0rem;
+        }
+      }
+    }
+  }
+}
