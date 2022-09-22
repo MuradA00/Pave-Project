@@ -113,7 +113,7 @@ gsap.to('.steps', {
   scrollTrigger: {
     pin: '.steps',
     end: '+=2500s',
-    markers: true,
+    markers: false,
     pinSpacing: true,
   },
 });
