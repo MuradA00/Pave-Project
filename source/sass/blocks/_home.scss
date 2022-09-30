@@ -6,9 +6,9 @@
   &__body {
     position: relative;
     z-index: 50;
-    overflow: hidden;
+
     padding-bottom: .1rem;
-    max-height: 341px;
+
   }
   position: relative;
   @include max-media(37.5em) {
@@ -157,10 +157,40 @@
     &__image {
       picture {
         &:nth-child(1) {
-          left: -5rem;
+          left: -20%;
         }
         &:nth-child(2) {
-          left: -5rem;
+          left: -20%;
+        }
+      }
+    }
+  }
+}
+
+@include max-media(1350px) {
+  .home {
+    &__image {
+      picture {
+        &:nth-child(1) {
+          left: -15%;
+        }
+        &:nth-child(2) {
+          left: -15%;
+        }
+      }
+    }
+  }
+}
+
+@include max-media(1250px) {
+  .home {
+    &__image {
+      picture {
+        &:nth-child(1) {
+          left: -8%;
+        }
+        &:nth-child(2) {
+          left: -8%;
         }
       }
     }
