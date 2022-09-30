@@ -44,12 +44,12 @@ $containerPadding: clamp(10px, 1.25vw, 20px);
   outline: 1px solid var(--clr-pink);
   border-radius: 8px;
   font-weight: 700;
-  background-color: var(--clr-white);
+  background-color: transparent;
   transition: all 300ms ease;
   &:hover {
-    background-color: var(--clr-pink);
-    color: var(--clr-white);
-    outline: none;
+    background-color: transparent;
+    color: var(--clr-blue);
+    outline: 1px solid var(--clr-blue);
   }
 }
 
@@ -67,9 +67,8 @@ $containerPadding: clamp(10px, 1.25vw, 20px);
   font-weight: 700;
   transition: all 300ms ease;
   &:hover {
-    background-color: var(--clr-white);
-    color: var(--clr-pink);
-    outline: 1px solid var(--clr-pink);
+    background-color: var(--clr-blue);
+    outline: 1px solid var(--clr-blue);
   }
 }
 

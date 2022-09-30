@@ -1,6 +1,7 @@
 .contact {
   position: relative;
-  background-color: var(--clr-beige);
+  background-color:  hsla(232, 100%, 98%, 1);
+  ;
   &::after {
     @include psevdo;
     width: 100%;

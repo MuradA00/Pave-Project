@@ -98,8 +98,8 @@ function setScrollImages() {
     scrollTrigger: {
       trigger: '#img2',
       toggleActions: 'play reverse play reverse',
-      start: '+=500s',
-      end: '+=1000s',
+      start: '+=1200s',
+      end: '+=1500s',
     },
     opacity: 1,
   });

@@ -59,7 +59,6 @@
     position: relative;
     z-index: 50;
     margin-inline: auto;
-    transition: all 650ms ease;
     overflow: hidden;
     position: absolute;
     top: 50%;
@@ -89,7 +88,7 @@
   &__column-block {
     display: flex;
     grid-gap: 2.25rem;
-    opacity: 0;
+
   }
   &__column-info {
     display: grid;
@@ -201,4 +200,12 @@
   .steps__number {
     background-color: var(--clr-pink);
   }
+}
+
+#img1 {
+  opacity: 1 !important;
+}
+
+.steps__image > img {
+  transform: all 300ms ease !important;
 }

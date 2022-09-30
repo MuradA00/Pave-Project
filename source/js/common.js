@@ -47,3 +47,19 @@ window.onload = function(){
     layerTwo.style.transform = 'translateX(-' + pageX/250 + '%) translateY(-' + pageY/250 + '%)';
   });
 }
+
+
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.header');
+  header.classList.toggle('fixed', window.scrollY > 0);
+  let headerHeight = header.clientHeight;
+  const homeSection = document.querySelector('.home')
+  function homeSpacing() {
+    homeSection.style = `margin-top: ${headerHeight}px`;
+  }
+  if (header.classList.contains('fixed')) {
+    homeSpacing();
+  } else {
+    homeSection.style = 'margin-top: 0px';
+  }
+})

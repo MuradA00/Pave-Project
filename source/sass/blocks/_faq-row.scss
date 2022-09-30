@@ -8,6 +8,7 @@
     border: 1px solid hsla(224, 20%, 81%, 1);
     border-radius: 8px;
     cursor: pointer;
+    transition: all 500ms ease;
   }
   &__visible {
     display: flex;
@@ -53,9 +54,11 @@
     transition: all 400ms ease;
   }
   &__hidden {
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    transition: all 500ms ease;
+    overflow: hidden;
     grid-gap: 10px;
-    padding: 0px 24px 24px 24px;
     p {
       color: hsla(226, 21%, 52%, 1);
     }
@@ -71,7 +74,9 @@
   }
   .faq-row {
     &__hidden {
-      display: block;
+      max-height: 100%;
+      opacity: 1;
+      padding: 0px 24px 24px;
     }
     &__icon {
       background-color: var(--clr-white);

@@ -1,12 +1,14 @@
 .home {
-  [data-aos=fade-right]
-   {
-    transform: translate3d(-100%,0,0);
-    transition-timing-function: ease-in-out;
+  padding: clamp(5rem,9.375vw,150px) 0 0;
+  [data-aos=fade-up] {
+    transform: translate3d(0px, 30px, 0px);
   }
-  [data-aos=fade-left] {
-    transform: translate3d(100%,0,0);
-    transition-timing-function: ease-in-out;
+  &__body {
+    position: relative;
+    z-index: 50;
+    overflow: hidden;
+    padding-bottom: .1rem;
+    max-height: 341px;
   }
   position: relative;
   @include max-media(37.5em) {
@@ -48,9 +50,13 @@
     grid-gap: var(--20-spc);
     text-align: center;
     position: relative;
+    overflow: hidden;
+    padding-bottom: .1rem;
+    height: fit-content;
   }
   &__heading {
     margin-bottom: 0;
+    animation: slideUp 2s ease;
   }
   &__title {
     line-height: 135%;
@@ -65,6 +71,7 @@
     width: 100%;
     height: clamp(426px, 67.75vw, 1084px);
     position: relative;
+    z-index: 10;
     picture {
       position: absolute;
       width: clamp(375px, 90vw, 1400px);

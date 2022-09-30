@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--clr-dark);
-  background-color: hsla(0, 0%, 98%, 1);
+  background-color: hsla(0, 0%, 100%, 1);
   width: 100%;
   position: relative;
   font-family: inherit;
@@ -127,3 +127,17 @@ input[type="number"] {
   clip-path: inset(100%);
 }
 
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-pink);
+  border-radius: 5px;
+}
