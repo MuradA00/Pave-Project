@@ -1,5 +1,6 @@
 .app {
   background: hsla(232, 100%, 98%, 1);
+  margin-bottom: clamp(80px, 9.375vw, 150px);
   &__body {
     padding: clamp(100px, 9.375vw, 150px) 0;
     max-width: calc(35rem + 35px);
