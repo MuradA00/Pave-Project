@@ -163,6 +163,5 @@ const setHeight = () => {
 let deviceWidth = window.matchMedia("(max-width: 4000px)");
 if (deviceWidth.matches) {
   window.addEventListener("resize", setHeight);
-
   setHeight();
 }

@@ -1,5 +1,12 @@
 .steps {
-
+  &__image {
+    // [data-aos=fade-up] {
+    //   transform: translate(-50%, -40%) !important;
+    // }
+    // [data-aos^=fade][data-aos^=fade].aos-animate {
+    //   transform: translate(-50%, -50%) !important;
+    // }
+  }
   &__slider {
     max-width: 550px;
     margin-inline: auto;
@@ -14,22 +21,6 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-  &__slider-item {
-    // &:nth-child(1) {
-    //   .steps__slider-num {
-    //     position: relative;
-    //     &::before {
-    //       @include psevdo;
-    //       width: 195px;
-    //       height: 35px;
-    //       background-image: url('../../img/steps/vector-mob-1.svg');
-    //       background-repeat: no-repeat;
-    //       background-size: cover;
-    //       right: -10rem;
-    //     }
-    //   }
-    // }
   }
   &__name {
     margin-top: 2rem;
@@ -64,6 +55,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     picture, img, source {
       max-height: clamp(500px, 43.75vw, 700px);
       @include max-media(95.625em) {
@@ -94,9 +86,6 @@
     display: grid;
     grid-gap: 1rem;
   }
-  // &__number {
-  //   opacity: 0;
-  // }
   &__number,
   .steps__slider-num {
     background-color: var(--clr-blue);
@@ -120,9 +109,6 @@
       background-position: center;
     }
   }
-  // &__number {
-  //   opacity: 0;
-  // }
   ._first {
     &::before {
       background-image: url('../../img/steps/steps-vector-1.svg');
