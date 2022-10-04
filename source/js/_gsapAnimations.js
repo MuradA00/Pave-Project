@@ -2,7 +2,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const firstBlock = document.querySelector('._first-block')
 const secondBlock = document.querySelector('._second-block')
-const thirdBlock = document.getElementById('heading3')
+const thirdBlock = document.getElementById('heading3'),
+      imgSecond = document.querySelector('#img2'),
+      imgThird = document.querySelector('#img3');
 
 function setScrollText(){
   gsap.to('.steps__image', {
@@ -39,8 +41,8 @@ function setScrollText(){
     scrollTrigger: {
       trigger: '._second-block',
       toggleActions: 'play reverse play reverse',
-      start: '+=500s',
-      end: '+=1000s',
+      start: '+=800s',
+      end: '+=1200s',
       onEnter() {
         secondBlock.classList.add('_active-block');
       },
@@ -61,8 +63,8 @@ function setScrollText(){
     scrollTrigger: {
       trigger: '#heading3',
       toggleActions: 'play reverse play reverse',
-      start: '+=1000s',
-      end: '+=2000s',
+      start: '+=1500s',
+      end: '+=3000s',
       onEnter() {
         thirdBlock.classList.add('_active-block');
       },
@@ -89,7 +91,7 @@ function setScrollImages() {
       trigger: '#img1',
       toggleActions: 'play reverse play reverse',
       start: '0s',
-      end: '+=1000s',
+      end: '+=1200s',
     },
     opacity: 1,
   });
@@ -99,7 +101,19 @@ function setScrollImages() {
       trigger: '#img2',
       toggleActions: 'play reverse play reverse',
       start: '+=1200s',
-      end: '+=1500s',
+      end: '+=2000s',
+      onEnter() {
+        imgSecond.classList.add('_active-img');
+      },
+      onLeave() {
+        imgSecond.classList.remove('_active-img');
+      },
+      onEnterBack() {
+        imgSecond.classList.add('_active-img');
+      },
+      onLeaveBack() {
+        imgSecond.classList.remove('_active-img');
+      }
     },
     opacity: 1,
   });
@@ -108,8 +122,20 @@ function setScrollImages() {
     scrollTrigger: {
       trigger: '#img3',
       toggleActions: 'play reverse play reverse',
-      start: '+=1500s',
-      end: '+=2000s',
+      start: '+=2000s',
+      end: '+=3000s',
+      onEnter() {
+        imgThird.classList.add('_active-img');
+      },
+      onLeave() {
+        imgThird.classList.remove('_active-img');
+      },
+      onEnterBack() {
+        imgThird.classList.add('_active-img');
+      },
+      onLeaveBack() {
+        imgThird.classList.remove('_active-img');
+      }
     },
     opacity: 1,
   });
@@ -119,7 +145,7 @@ function setScrollImages() {
 gsap.to('.steps', {
   scrollTrigger: {
     pin: '.steps',
-    end: '+=2100s',
+    end: '+=3000s',
     markers: false,
     pinSpacing: true,
   },

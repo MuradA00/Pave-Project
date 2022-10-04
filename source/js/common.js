@@ -1,7 +1,7 @@
 AOS.init();
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.m-menu')
-const body = document.getElementById('body')
+const body = document.getElementById('body');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('_active-burger')
@@ -63,3 +63,4 @@ window.addEventListener('scroll', function() {
     homeSection.style = 'margin-top: 0px';
   }
 })
+

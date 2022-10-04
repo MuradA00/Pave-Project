@@ -209,3 +209,15 @@
 .steps__image > img {
   transform: all 300ms ease !important;
 }
+
+#img2,
+#img3 {
+  transform: translate(-150%, -50%);
+  transition: all 400ms ease !important;
+}
+
+._active-img {
+  opacity: 1;
+
+  transform: translate(-50%,-50%) !important;
+}
