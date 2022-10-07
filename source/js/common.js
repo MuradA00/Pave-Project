@@ -64,3 +64,8 @@ window.addEventListener('scroll', function() {
   }
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.header');
+  let headersHeight = header.clientHeight;
+    mobMenu.style.marginTop = `${headersHeight}px`
+})

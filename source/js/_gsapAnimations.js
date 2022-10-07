@@ -142,6 +142,8 @@ function setScrollImages() {
 
 }
 
+let headersHeight = document.querySelector('header').clientHeight + 'px'
+
 gsap.to('.steps', {
   scrollTrigger: {
     pin: '.steps',
@@ -164,4 +166,14 @@ let deviceWidth = window.matchMedia("(max-width: 4000px)");
 if (deviceWidth.matches) {
   window.addEventListener("resize", setHeight);
   setHeight();
+}
+
+
+const stepsInner = document.querySelector('.steps__inner'),
+      stepsColumn = document.querySelector('.steps__column');
+
+let stepsInnerHeight = stepsInner.clientHeight;
+
+if (stepsInnerHeight > window.innerHeight) {
+  stepsColumn.style.gridGap = '35px';
 }

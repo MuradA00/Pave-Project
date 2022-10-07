@@ -5,6 +5,6 @@ window.addEventListener('scroll', function() {
   if (scrollPosition > homeImagePosition / 1.4) {
     homeImage.style.transform = 'translateY(0)'
   } else {
-    homeImage.style.transform = 'translateY(' + scrollPosition * .5 + 'px)';
+    homeImage.style.transform = 'translateY(' + scrollPosition * .45 + 'px)';
   }
 });

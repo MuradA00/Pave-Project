@@ -211,3 +211,11 @@
 
   transform: translate(-50%,-50%) !important;
 }
+
+@media only screen and (max-height: 800px) {
+  .steps {
+    &__inner {
+      padding-top: 30px;
+    }
+  }
+}
