@@ -1,4 +1,5 @@
 .steps {
+  background-color: var(--clr-white);
   &__image {
     // [data-aos=fade-up] {
     //   transform: translate(-50%, -40%) !important;
@@ -170,6 +171,9 @@
     &__inner {
       display: none !important;
     }
+  }
+  .steps__slider-item .steps__slider-image {
+    transform: translate(0, 0) !important;
   }
 }
 

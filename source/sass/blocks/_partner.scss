@@ -7,9 +7,9 @@
     grid-gap: clamp(20px, 11.25vw, 180px);
   }
   &__image {
-    max-height: 30rem;
-    img, picture {
-      max-height: 30rem;
+    max-width: 29.625rem;
+    img, source, picture {
+      height: 100%;
     }
   }
   &__info {

@@ -1,13 +1,19 @@
 .app {
   background: hsla(232, 100%, 98%, 1);
   margin-bottom: clamp(80px, 9.375vw, 150px);
+  &__container {
+    padding: 0 clamp(10px,1.25vw,20px) 0 0;
+  }
   &__body {
     padding: clamp(100px, 9.375vw, 150px) 0;
-    max-width: calc(35rem + 35px);
     margin-inline: auto;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    grid-gap: clamp(50px, 6.25vw, 100px);
   }
   &__info {
+    max-width: 465px;
+    text-align: left;
     p {
       font-size: clamp(24px, 1.75vw, 28px);
       font-weight: 700;
@@ -15,6 +21,24 @@
       span {
         color: var(--clr-dark);
       }
+    }
+  }
+}
+
+@include max-media(46.875em) {
+  .app {
+    &__body {
+      display: flex;
+      flex-direction: column-reverse;
+      grid-gap: 2.5rem;
+    }
+    &__info {
+      padding-left: 24px;
+      text-align: center;
+    }
+    &__image {
+      max-width: 34.375rem;
+      margin-right: auto;
     }
   }
 }

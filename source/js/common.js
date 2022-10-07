@@ -1,7 +1,8 @@
 AOS.init();
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.m-menu')
-const body = document.getElementById('body');
+const body = document.getElementById('body'),
+      homeImage = document.querySelector('.home__image-wrapper');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('_active-burger')
@@ -22,7 +23,6 @@ let stepsSlider = new Swiper(".steps__slider", {
     delay: 2000
   }
 });
-
 
 const menuMobLinks = document.querySelectorAll('.menu-nav__link');
 
