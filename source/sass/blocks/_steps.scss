@@ -1,13 +1,5 @@
 .steps {
   background-color: var(--clr-white);
-  &__image {
-    // [data-aos=fade-up] {
-    //   transform: translate(-50%, -40%) !important;
-    // }
-    // [data-aos^=fade][data-aos^=fade].aos-animate {
-    //   transform: translate(-50%, -50%) !important;
-    // }
-  }
   &__slider {
     max-width: 550px;
     margin-inline: auto;
@@ -56,10 +48,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     picture, img, source {
       max-height: clamp(500px, 43.75vw, 700px);
       @include max-media(95.625em) {
+        max-height: 500px;
+      }
+      @media only screen and (max-height: 768px) {
         max-height: 500px;
       }
     }
@@ -216,6 +210,27 @@
   .steps {
     &__inner {
       padding-top: 30px;
+    }
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .steps {
+    &__column {
+      grid-gap: 2rem;
+    }
+    &__column-info {
+      grid-gap: 8px;
+    }
+    ._first {
+      &::before {
+        height: 150px;
+      }
+    }
+    ._second {
+      &::before {
+        height: 160px;
+      }
     }
   }
 }
