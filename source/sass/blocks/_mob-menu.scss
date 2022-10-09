@@ -8,11 +8,15 @@
   background-color: var(--clr-white);
   width: 100%;
   min-height: 100vh;
+  height: 100%;
   &__container {
     padding: 40px 10px 55px 10px;
     max-width: 27.25rem;
     margin-inline: auto;
     min-width: 325px;
+    height: inherit;
+    display: grid;
+    align-items: center;
   }
   &__buttons {
     width: 100%;

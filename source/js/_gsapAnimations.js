@@ -105,9 +105,9 @@ function setScrollImages() {
       onEnter() {
         imgSecond.classList.add('_active-img');
       },
-      onLeave() {
-        imgSecond.classList.remove('_active-img');
-      },
+      // onLeave() {
+      //   imgSecond.classList.remove('_active-img');
+      // },
       onEnterBack() {
         imgSecond.classList.add('_active-img');
       },
@@ -142,21 +142,23 @@ function setScrollImages() {
 
 }
 
-let headersHeight = document.querySelector('header').clientHeight + 'px'
-
-gsap.to('.steps', {
-  scrollTrigger: {
-    pin: '.steps',
-    end: '+=3000s',
-    markers: false,
-    pinSpacing: true,
-  },
-});
-
-
 setScrollText();
 setScrollImages();
 
+let mobWidth = window.matchMedia('(min-width: 1050px)');
+
+if (mobWidth.matches === true) {
+  gsap.to('.steps', {
+    scrollTrigger: {
+      pin: '.steps',
+      end: '+=3000s',
+      markers: false,
+      pinSpacing: true,
+    },
+  });
+}
+
+let headersHeight = document.querySelector('header').clientHeight + 'px'
 
 const setHeight = () => {
   document.querySelector(".steps").style.minHeight = window.innerHeight + "px"
