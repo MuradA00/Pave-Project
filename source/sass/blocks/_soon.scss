@@ -1,0 +1,73 @@
+.soon {
+  background-color: #F7F8FF;
+  padding: 5rem 0 10rem 0;
+  background-image: url('../../img/coming soon/bg-comin.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 300ms ease;
+  .form {
+    padding: 3.75rem 5rem;
+    max-width: 36rem;
+    &__heading {
+      font-size: clamp(35px, 3.75vw, 60px);
+      color: #011554;
+      font-weight: 700;
+    }
+    &__subheading {
+      color: hsla(226, 21%, 52%, 1);
+      font-size: 1rem;
+      margin-top: 24px;
+    }
+    .form-inputs {
+      margin-top: 2.5rem;
+      &__item {
+        &:nth-child(3) {
+          justify-content: start;
+        }
+      }
+    }
+  }
+}
+
+@include max-media(62.5em) {
+  .soon {
+    background-size: cover;
+    background-position: right;
+    &__body {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .form {
+    &__heading {
+      text-align: center;
+    }
+  }
+}
+
+@include max-media(43.75em) {
+  .soon {
+    .form {
+      padding: 30px 50px;
+      .form-inputs__item {
+        &:nth-child(3) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@include max-media(31.25em) {
+  .soon {
+    &__container {
+      padding: 0 15px;
+    }
+    background-position: center;
+    .form {
+      padding: 30px;
+    }
+  }
+}
