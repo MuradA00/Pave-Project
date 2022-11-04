@@ -1,4 +1,4 @@
-// AOS.init();
+AOS.init();
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.m-menu')
 const body = document.getElementById('body'),
