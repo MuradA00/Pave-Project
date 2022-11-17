@@ -192,8 +192,15 @@
 
 ._active-block {
   display: grid !important;
-  .steps__number {
-    background-color: var(--clr-pink);
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
