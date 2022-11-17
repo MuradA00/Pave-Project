@@ -12,15 +12,15 @@ function setScrollText(){
       trigger: '.steps__name'
     },
     opacity: 1,
-    start: '500s'
+    start: '0s'
   })
 
   gsap.to('._first-block', {
     scrollTrigger: {
       trigger: '._first-block',
       toggleActions: 'play reverse play reverse',
-      start: '0s',
-      end: '+=1000s',
+      start: '-500s',
+      end: '+=500s',
       onEnter() {
         firstBlock.classList.add('_active-block');
       },
@@ -41,8 +41,8 @@ function setScrollText(){
     scrollTrigger: {
       trigger: '._second-block',
       toggleActions: 'play reverse play reverse',
-      start: '+=800s',
-      end: '+=1200s',
+      start: '-75s',
+      end: '+=500s',
       onEnter() {
         secondBlock.classList.add('_active-block');
       },
@@ -63,8 +63,8 @@ function setScrollText(){
     scrollTrigger: {
       trigger: '#heading3',
       toggleActions: 'play reverse play reverse',
-      start: '+=1500s',
-      end: '+=3000s',
+      start: '+=450s',
+      end: '+=2000s',
       onEnter() {
         thirdBlock.classList.add('_active-block');
       },
@@ -91,7 +91,7 @@ function setScrollImages() {
       trigger: '#img1',
       toggleActions: 'play reverse play reverse',
       start: '0s',
-      end: '+=1200s',
+      end: '+=600s',
     },
     opacity: 1,
   });
@@ -100,8 +100,8 @@ function setScrollImages() {
     scrollTrigger: {
       trigger: '#img2',
       toggleActions: 'play reverse play reverse',
-      start: '+=1200s',
-      end: '+=2000s',
+      start: '+=500s',
+      end: '+=1000s',
       onEnter() {
         imgSecond.classList.add('_active-img');
       },
@@ -122,8 +122,8 @@ function setScrollImages() {
     scrollTrigger: {
       trigger: '#img3',
       toggleActions: 'play reverse play reverse',
-      start: '+=2000s',
-      end: '+=3000s',
+      start: '+=1000s',
+      end: '+=2000s',
       onEnter() {
         imgThird.classList.add('_active-img');
       },
@@ -151,7 +151,7 @@ if (mobWidth.matches === true) {
   gsap.to('.steps', {
     scrollTrigger: {
       pin: '.steps',
-      end: '+=3000s',
+      end: '+=2000s',
       markers: false,
       pinSpacing: true,
     },

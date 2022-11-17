@@ -30,6 +30,12 @@
     flex-direction: column;
     text-align: center;
   }
+  &__heading {
+    margin-bottom: rem(24);
+  }
+  &__column-text {
+    margin-bottom: rem(40);
+  }
   &__name {
     margin-top: 2rem;
     font-weight: 700;
@@ -48,13 +54,14 @@
     display: grid;
     grid-template-columns: 22.5rem auto;
     justify-content: space-around;
+    align-items: center;
     grid-gap: 2rem;
     align-items: center;
     padding-top: clamp(20px, 5vw, 80px);
   }
   &__img {
     opacity: 0;
-    max-width: 23.125rem;
+    max-width: rem(225);
     position: relative;
     z-index: 50;
     margin-inline: auto;
@@ -73,6 +80,9 @@
       }
     }
   }
+  &__start {
+    max-width:  rem(150);
+  }
   &__column {
     display: grid;
     grid-gap: 64px;
@@ -88,13 +98,12 @@
     }
   }
   &__column-block {
-    display: flex;
+    display: none;
     grid-gap: 2.25rem;
 
   }
   &__column-info {
     display: grid;
-    grid-gap: 1rem;
   }
   &__number,
   .steps__slider-num {
@@ -117,20 +126,6 @@
       height: 195px;
       z-index: -1;
       background-position: center;
-    }
-  }
-  ._first {
-    &::before {
-      background-image: url('../../img/steps/steps-vector-1.svg');
-      top: 33%;
-    }
-  }
-  ._second {
-    &::before {
-      background-image: url('../../img/steps/steps-vector-2.svg');
-      top: 33%;
-      right: 0;
-      height: 197px;
     }
   }
   &__image {
@@ -196,6 +191,7 @@
 
 
 ._active-block {
+  display: grid !important;
   .steps__number {
     background-color: var(--clr-pink);
   }
@@ -211,7 +207,7 @@
 
 #img2,
 #img3 {
-  transform: translate(-150%, -50%);
+  transform: translate(-50%, -150%);
   transition: all 400ms ease !important;
 }
 
@@ -225,9 +221,7 @@
     &__column {
       grid-gap: 2rem;
     }
-    &__column-info {
-      grid-gap: 8px;
-    }
+
     ._first {
       &::before {
         height: 150px;
