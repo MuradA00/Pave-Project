@@ -20,7 +20,7 @@ function setScrollText(){
       trigger: '._first-block',
       toggleActions: 'play reverse play reverse',
       start: '-500s',
-      end: '+=500s',
+      end: '+=450s',
       onEnter() {
         firstBlock.classList.add('_active-block');
       },

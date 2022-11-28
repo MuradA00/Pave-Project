@@ -1,3 +1,5 @@
+// const { init } = require("browser-sync");
+
 AOS.init({
   once: true
 });
@@ -62,3 +64,4 @@ document.addEventListener('DOMContentLoaded', () => {
   let headersHeight = header.clientHeight;
     mobMenu.style.marginTop = `${headersHeight}px`
 })
+
