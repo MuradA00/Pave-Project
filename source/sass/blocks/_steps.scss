@@ -13,7 +13,7 @@
   &__image {
     height: 100%;
 
-    max-height: rem(463);
+    // max-height: rem(463);
     overflow: hidden;
   }
   &__slider-inner {
@@ -197,7 +197,7 @@
 
 ._active-block {
   display: grid !important;
-  animation: fade 800ms ease;
+  animation: fade 500ms ease;
 }
 
 @keyframes fade {
@@ -211,23 +211,22 @@
   }
 }
 
-#img1 {
-  opacity: 1 !important;
-}
+// #img1 {
+//   opacity: 1 !important;
+// }
 
-.steps__image > img {
-  transform: all 300ms ease !important;
-}
+// .steps__image > img {
+//   transform: all 300ms ease !important;
+// }
 
 #img2,
 #img3 {
-  transform: translate(-50%, 150%);
-  transition: all 800ms ease-in-out !important;
+  opacity: 0;
+  transition: all 300ms ease-in-out !important;
 }
 
 ._active-img {
-  transform: translate(-50%,-50%) !important;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 @media only screen and (max-height: 800px) {
@@ -235,7 +234,6 @@
     &__column {
       grid-gap: 2rem;
     }
-
     ._first {
       &::before {
         height: 150px;

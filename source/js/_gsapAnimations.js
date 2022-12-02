@@ -20,7 +20,7 @@ function setScrollText(){
       trigger: '._first-block',
       toggleActions: 'play reverse play reverse',
       start: '-500s',
-      end: '+=450s',
+      end: '+=1250s',
       onEnter() {
         firstBlock.classList.add('_active-block');
       },
@@ -41,8 +41,8 @@ function setScrollText(){
     scrollTrigger: {
       trigger: '._second-block',
       toggleActions: 'play reverse play reverse',
-      start: '-75s',
-      end: '+=500s',
+      start: '+=750s',
+      end: '+=1500s',
       onEnter() {
         secondBlock.classList.add('_active-block');
       },
@@ -63,8 +63,8 @@ function setScrollText(){
     scrollTrigger: {
       trigger: '#heading3',
       toggleActions: 'play reverse play reverse',
-      start: '+=450s',
-      end: '+=2000s',
+      start: '+=2235s',
+      end: '+=3000s',
       onEnter() {
         thirdBlock.classList.add('_active-block');
       },
@@ -91,17 +91,17 @@ function setScrollImages() {
       trigger: '#img1',
       toggleActions: 'play reverse play reverse',
       start: '0s',
-      end: '+=600s',
+      end: '+=750s',
     },
-    opacity: 1,
+
   });
 
   gsap.to('#img2', {
     scrollTrigger: {
       trigger: '#img2',
       toggleActions: 'play reverse play reverse',
-      start: '+=500s',
-      end: '+=1000s',
+      start: '+=850s',
+      end: '+=2235s',
       onEnter() {
         imgSecond.classList.add('_active-img');
       },
@@ -122,8 +122,8 @@ function setScrollImages() {
     scrollTrigger: {
       trigger: '#img3',
       toggleActions: 'play reverse play reverse',
-      start: '+=1000s',
-      end: '+=2000s',
+      start: '+=2320s',
+      end: '+=3500s',
       onEnter() {
         imgThird.classList.add('_active-img');
       },
@@ -151,7 +151,7 @@ if (mobWidth.matches === true) {
   gsap.to('.steps', {
     scrollTrigger: {
       pin: '.steps',
-      end: '+=2000s',
+      end: '+=4000s',
       markers: false,
       pinSpacing: true,
     },
