@@ -1,0 +1,7 @@
+.header-buttons {
+  @include al-flex;
+  grid-gap: 1rem;
+  @include max-media(66.875em) {
+    display: none;
+  }
+}

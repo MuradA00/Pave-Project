@@ -1,0 +1,29 @@
+.nav {
+  &__list {
+    @include al-flex;
+    grid-gap: clamp(15px, 2vw, var(--32-spc));
+  }
+  &__link {
+    font-size: clamp(14px, 1vw, 16px);
+    font-weight: 700;
+    position: relative;
+    &::before {
+      @include psevdo;
+      top: 1.5rem;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      background-color: var(--clr-pink);
+      transition: all 300ms ease;
+    }
+    &:hover::before {
+      width: 50%;
+    }
+  }
+}
+
+@include max-media(66.875em) {
+ .header__row {
+  display: none;
+ }
+}

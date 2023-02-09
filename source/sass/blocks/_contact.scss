@@ -1,0 +1,74 @@
+.contact {
+  position: relative;
+  background-color:  hsla(232, 100%, 98%, 1);
+  ;
+  &::after {
+    @include psevdo;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../../img/contact/contact-decor.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 50;
+    @include max-media(46.25em) {
+      background-image: url('../../img/contact/contact-decor-mob.png');
+      background-size: 471px;
+    }
+  }
+  &::before {
+    @include psevdo;
+    width: max(27.5vw, 23.4375rem);
+    background-color: var(--clr-blue);
+    height: 100%;
+    right: 0;
+    z-index: 5;
+    @include max-media(56.25em) {
+     width: 100%;
+     height: 19.75rem;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__name {
+    margin-bottom: 0;
+  }
+  &__body {
+    position: relative;
+    z-index: 150;
+    padding: clamp(80px, 8.5625vw, 137px) 0 clamp(120px, 8.5625vw, 137px) 0;
+    display: grid;
+    grid-template-columns: 17.5rem 1fr;
+    grid-gap: max(13.75vw, 4rem);
+    @include max-media(56.25em) {
+      grid-template-columns: 100%;
+      margin-inline: auto;
+    }
+  }
+  &__descr {
+    @include max-media(56.25em) {
+      p {
+        max-width: 327px;
+        margin-inline: auto;
+      }
+    }
+  }
+  &__info {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: max(1.25vw, 1rem);
+    @include max-media(56.25em) {
+      padding-top: 0;
+    }
+    & > * {
+      height: fit-content;
+      text-align: left;
+      @include max-media(56.25em) {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="eng">
+@@include('_head.html',{})
+<body id="body">
+  @@include('_header.html',{})
+  @@include('_mob-menu.html',{})
+  <main>
+    <section class="soon">
+      <div class="soon__container _container">
+        <div class="soon__body">
+          <div class="soon__form">
+            <form action="" class="form">
+              <div class="form__heading">
+                Coming Soon!
+              </div>
+              <div class="form__subheading">
+                Be the first to try our app. We will notify you soon.
+              </div>
+              <ul class="form-inputs">
+                <li class="form-inputs__item">
+                  <div class="form-inputs__heading">
+                    Name
+                  </div>
+                  <div class="form-inputs__input">
+                    <input type="text" placeholder="Full name">
+                  </div>
+                </li>
+                <li class="form-inputs__item">
+                  <div class="form-inputs__heading">
+                    Email
+                  </div>
+                  <div class="form-inputs__input">
+                    <input type="text" placeholder="Email address">
+                  </div>
+                </li>
+                <li class="form-inputs__item">
+                  <button class="form__button _buttonPink">
+                    Notify me
+                  </button>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('_footer.html',{})
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/_archons.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>
