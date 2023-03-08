@@ -1,8 +1,7 @@
-// const { init } = require("browser-sync");
-
 AOS.init({
   once: true
 });
+
 const burger = document.querySelector('.burger')
 const mobMenu = document.querySelector('.m-menu')
 const body = document.getElementById('body'),
